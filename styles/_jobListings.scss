@@ -1,0 +1,60 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 37rem;
+}
+.category div {
+  margin-right: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.category div li,
+select {
+  margin-bottom: 0.5rem;
+  background-color: forestgreen;
+}
+.editButton {
+  margin-left: auto;
+}
+.category div li {
+  overflow-x: auto;
+}
+
+// .listContainer {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: column;
+//   width: 97vw;
+// }
+// .jobListing {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 97vw;
+// }
+// .listContainer li,
+// select {
+//   width: 15rem;
+//   margin-right: 2rem;
+//   font-size: 1.5rem;
+//   //   background-color: dodgerblue;
+// }
+// .editButton {
+//   margin-left: auto;
+//   padding-left: 1rem;
+//   min-width: 7rem;
+//   display: flex;
+//   justify-content: space-between;
+//   height: 2rem;
+// }
+// .editButton {
+//   color: #bbb6b6;
+//   border: none;
+//   margin-bottom: 5px;
+// }
+// .editButton:hover {
+//   cursor: pointer;
+//   color: #ece6e6;
+//   transition: ease-in-out 0.5s;
+// }
+// .editButton:active {
+//   transform: scale(0.9);
+// }
