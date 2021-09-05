@@ -23,46 +23,101 @@
     </header>
     <main>
       <div>
+        <div class="inputSection">
+          <form action="" class="inputForm">
+            <!-- Date Section -->
+            <div class="dateInputContainer">
+              <label for="date">Date Applied</label>
+              <input type="date" id="dateApplied" name="date" />
+            </div>
+            <!-- Company-Name Section -->
+            <div class="CompanyNameContainer flexColumn">
+              <label for="website-name" class="companyNameInput"
+                >Company Name</label
+              >
+              <input type="text" id="website-name" class="companyNameInput" />
+            </div>
+            <!-- CompanyURL Section -->
+            <div class="CompanyUrlContainer flexColumn">
+              <label for="website-Url" class="companyUrlInput"
+                >Company URL</label
+              >
+              <input type="url" id="website-Url" class="companyUrlInput" />
+            </div>
+            <!-- JobBoard Section -->
+            <div class="jobBoardContainer flexColumn">
+              <label for="jobBoard-input" class="jobBoardInput"
+                >Job Board</label
+              >
+              <input type="text" id="jobBoard-input" class="jobBoardInput" />
+            </div>
+            <!-- Contact Section -->
+            <div class="contactContainer flexColumn">
+              <label for="contact-input" class="contactInput">Contact</label>
+              <input type="text" id="contact-input" class="contactInput" />
+            </div>
+            <!-- email Section -->
+            <div class="emailContainer flexColumn">
+              <label for="email-input" class="emailInput">Email</label>
+              <input type="email" id="email-input" class="emailInput" />
+            </div>
+            <!-- researched Section -->
+            <div class="researchedContainer flexColumn">
+              <label for="researched">Researched</label>
+              <select class="form-control" id="researched">
+                <option>NO</option>
+                <option>YES</option>
+              </select>
+            </div>
+            <!-- researched Section -->
+            <div class="followedUpContainer flexColumn">
+              <label for="followedUp">Followed UP</label>
+              <select class="form-control" id="followedUp">
+                <option>No</option>
+                <option>YES</option>
+              </select>
+            </div>
+          </form>
+        </div>
         <h2 class="activeHeader">Active Applications</h2>
-
         <div class="categoryHeaders">
           <section class="applyDate category">
-            Date Applied
-            <div class="applyDateSec"></div>
+            Date
+            <div class="applyDateSec section"></div>
           </section>
           <section class="CompanyName category">
             Company Name
-            <div class="CompanyNameSec"></div>
+            <div class="CompanyNameSec section"></div>
           </section>
           <section class="companyWebsite category">
-            Company Website
-            <div class="companyWebsiteSec"></div>
+            Company URL
+            <div class="companyWebsiteSec section1"></div>
           </section>
           <section class="jobBoard category">
             Job Board
-            <div class="jobBoardSec"></div>
+            <div class="jobBoardSec section"></div>
           </section>
           <section class="Contact category">
             Contact
-            <div class="ContactSec"></div>
+            <div class="ContactSec section"></div>
           </section>
           <section class="Email category">
             Email
-            <div class="EmailSec"></div>
+            <div class="EmailSec section"></div>
           </section>
           <section class="researched category">
             Researched
-            <div class="researchedSec"></div>
+            <div class="researchedSec section"></div>
           </section>
           <section class="followUp category">
             Followed Up
-            <div class="followUpSec"></div>
+            <div class="followUpSec section"></div>
           </section>
         </div>
         <!--  -->
         <div class="listContainer"></div>
       </div>
     </main>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
   </body>
 </html>
