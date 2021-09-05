@@ -1,13 +1,13 @@
 .categoryHeaders {
   display: flex;
   justify-content: space-between;
-  width: 96vw;
+  width: 90vw;
   margin: auto;
 }
 section {
   width: 35rem;
   margin-right: 2.2rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 .activeHeader {
   text-align: center;
@@ -17,6 +17,7 @@ main {
   align-items: center;
   justify-content: center;
 }
+
 // .dateApplied {
 //   background-color: blue;
 //   width: 2rem;

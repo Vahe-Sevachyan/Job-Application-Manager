@@ -1,0 +1,24 @@
+// .inputSection {
+//   display: flex;
+//   justify-content: space-between;
+//   min-width: 90vw;
+//   margin: auto;
+// }
+.inputSection form {
+  display: flex;
+  justify-content: space-between;
+  min-width: 90vw;
+  margin: auto;
+}
+//input styles
+.dateInputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 13rem;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+//input styles

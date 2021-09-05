@@ -10,18 +10,37 @@ const contactSec = document.querySelector(".ContactSec");
 const emailSec = document.querySelector(".EmailSec");
 const researchedSec = document.querySelector(".researchedSec");
 const followUpSec = document.querySelector(".followUpSec");
-
+//input queries
+const dateSelected = document.querySelector("#dateApplied");
+const companyNameInput = document.querySelector("#website-name");
+const companyURLInput = document.querySelector("#website-Url");
+const jobBoardInput = document.querySelector("#jobBoard-input");
+const contactInput = document.querySelector("#contact-input");
+const emailInput = document.querySelector("#email-input");
+const researchedDropDown = document.querySelector("#researched");
 let applicationNumber = 0;
 
-// //wrapperDiv
-// let jobListings = {};
+let webSection = [];
+// function hasWhiteSpace(value) {
+//   return /\s/g.test(value);
+// }
+// function savetoLocalStorage() {
+//   companyName = companyNameInput.innerHTML;
+//   let webcompanylName = {
+//     name: companyName,
+//   };
+//   webSection.push(webcompanylName);
+//   console.log(webSection);
+// }
+// savetoLocalStorage();
 
 const dateAppliedSection = () => {
   applicationNumber++;
   //dateApplied section
-  const dateApplied = document.createElement("li");
+  const dateApplied = document.createElement("input");
+  dateApplied.setAttribute("type", "date");
   dateApplied.classList.add(`dateApplied`);
-  dateApplied.innerHTML = "Enter Date";
+  dateApplied.value = dateSelected.value;
   //check box
   const checkBox = document.createElement("input");
   checkBox.classList.add(`checkbox-list`);
@@ -45,7 +64,10 @@ const companyNameSection = () => {
   //companyName section
   const companyName = document.createElement("li");
   companyName.classList.add(`companyName`);
-  companyName.innerHTML = "....";
+  companyNameInput.value === ""
+    ? (companyName.innerHTML = "undefined")
+    : (companyName.innerHTML = companyNameInput.value);
+
   //edit button
   // const editButton = document.createElement("button");
   // editButton.classList.add("editButton");
@@ -57,6 +79,7 @@ const companyNameSection = () => {
   // companyName.append(editButton);
   companyNameSec.append(companyName);
   companyNameSec.insertBefore(companyName, companyNameSec.firstChild);
+  companyNameInput.value = "";
 };
 //
 //
@@ -65,7 +88,10 @@ const companyWebsiteSection = () => {
   //Company Website
   const companyWebsite = document.createElement("li");
   companyWebsite.classList.add(`companyWebsite`);
-  companyWebsite.innerHTML = "Enter URL";
+
+  companyURLInput.value === ""
+    ? (companyWebsite.innerHTML = "Undefined")
+    : (companyWebsite.innerHTML = companyURLInput.value);
   // //edit button
   // const editButton = document.createElement("button");
   // editButton.classList.add("editButton");
@@ -77,6 +103,7 @@ const companyWebsiteSection = () => {
   // companyWebsite.append(editButton);
   companyWebsiteSec.append(companyWebsite);
   companyWebsiteSec.insertBefore(companyWebsite, companyWebsiteSec.firstChild);
+  companyURLInput.value = "";
 };
 //
 //
@@ -85,7 +112,9 @@ const jobBoardSection = () => {
   // JobBoard section
   const jobBoard = document.createElement("li");
   jobBoard.classList.add(`jobBoard`);
-  jobBoard.innerHTML = "Job Board Name";
+  jobBoardInput.value === ""
+    ? (jobBoard.innerHTML = "Undefined")
+    : (jobBoard.innerHTML = jobBoardInput.value);
   // //edit button
   // const editButton = document.createElement("button");
   // editButton.classList.add("editButton");
@@ -97,6 +126,7 @@ const jobBoardSection = () => {
   // jobBoard.append(editButton);
   jobBoardSec.append(jobBoard);
   jobBoardSec.insertBefore(jobBoard, jobBoardSec.firstChild);
+  jobBoardInput.value = "";
 };
 //
 //
@@ -104,7 +134,10 @@ const contactSection = () => {
   applicationNumber++;
   const contact = document.createElement("li");
   contact.classList.add(`Contact`);
-  contact.innerHTML = "contact Name";
+
+  contactInput.value === ""
+    ? (contact.innerHTML = "Undefined")
+    : (contact.innerHTML = contactInput.value);
   //edit button
   // const editButton = document.createElement("button");
   // editButton.classList.add("editButton");
@@ -116,6 +149,7 @@ const contactSection = () => {
   // contact.append(editButton);
   contactSec.append(contact);
   contactSec.insertBefore(contact, contactSec.firstChild);
+  contactInput.value = "";
 };
 //
 //
@@ -123,7 +157,10 @@ const emailSection = () => {
   applicationNumber++;
   const email = document.createElement("li");
   email.classList.add(`Email`);
-  email.innerHTML = "email Name";
+  emailInput.value === ""
+    ? (email.innerHTML = "Undefined")
+    : (email.innerHTML = emailInput.value);
+  // email.innerHTML = "email Name";
   // //edit button
   // const editButton = document.createElement("button");
   // editButton.classList.add("editButton");
@@ -135,7 +172,35 @@ const emailSection = () => {
   // email.append(editButton);
   emailSec.append(email);
   emailSec.insertBefore(email, emailSec.firstChild);
+  emailInput.value = "";
 };
+
+//
+//
+
+//
+//
+// const researchedSelectList = () => {
+//   applicationNumber++;
+//   let researched = document.createElement("select");
+//   let optionValues = ["Select Value", "YES", "NO"];
+//   researched.name = "option1";
+//   researched.id = "select1";
+
+//   const options = optionValues.map((values) => {
+//     const selectOptions = values.toLocaleLowerCase();
+//     return `<option value="${selectOptions}">${values}</option>`;
+//   });
+//   researchedDropDown.value === optionValues[1] || optionValues[2]
+//     ? (researched.innerHTML = researchedDropDown.value)
+//     : (researched.innerHTML = optionValues[0]);
+//   researched.innerHTML = options;
+//   researchedSec.appendChild(researched);
+//   researchedSec.insertBefore(researched, researchedSec.firstChild);
+// };
+//
+//
+
 //
 //
 const researchedSelectList = () => {
@@ -152,7 +217,6 @@ const researchedSelectList = () => {
   researchedSec.appendChild(researched);
   researchedSec.insertBefore(researched, researchedSec.firstChild);
 };
-
 //
 //
 const followUpEmail = () => {
@@ -165,11 +229,11 @@ const followUpEmail = () => {
     const selectOptions = values.toLocaleLowerCase();
     return `<option value="${selectOptions}">${values}</option>`;
   });
+
   followUp.innerHTML = options;
   followUpSec.appendChild(followUp);
   followUpSec.insertBefore(followUp, followUpSec.firstChild);
 };
-
 //
 //
 addJobBtn.onclick = () => {
@@ -182,6 +246,41 @@ addJobBtn.onclick = () => {
   researchedSelectList();
   followUpEmail();
 };
+
+// const saveToStorage = ()=>{
+//   localStorage.setItem('')
+// }
+// const localStorage = () => {
+//   let dateValue = applyDateSec.value;
+//   let businessName = companyNameSec.value;
+//   let companyURL = companyWebsiteSec.value;
+//   let jobBoard = jobBoardSec.value;
+//   let contactName = contactSec.value;
+//   let email = emailSec.value;
+//   let researchValue = researchedSec.value;
+//   let followUpValue = followUpSec.value;
+
+//   const jobListing = {
+//     date: dateValue,
+//     businessName: businessName,
+//     url: companyURL,
+//     jobboard: jobBoard,
+//     contactname: contactName,
+//     email: email,
+//     research: researchValue,
+//     followUpValue: followUpValue,
+//   };
+//   // jobListings[businessName] = jobListing;
+//   localStorage.setItem("jobListing", JSON.stringify(jobListing));
+// };
+//
+//
+//
+//
+//
+//
+//
+
 //
 //
 //
@@ -199,7 +298,30 @@ addJobBtn.onclick = () => {
 //
 //
 //
-//
+// let jobListings = {};
+// const localStorage = () => {
+//   let dateValue = applyDateSec.value;
+//   let businessName = companyNameSec.value;
+//   let companyURL = companyWebsiteSec.value;
+//   let jobBoard = jobBoardSec.value;
+//   let contactName = contactSec.value;
+//   let email = emailSec.value;
+//   let researchValue = researchedSec.value;
+//   let followUpValue = followUpSec.value;
+
+//   const jobListing = {
+//     date: dateValue,
+//     businessName: businessName,
+//     url: companyURL,
+//     jobboard: jobBoard,
+//     contactname: contactName,
+//     email: email,
+//     research: researchValue,
+//     followUpValue: followUpValue,
+//   };
+//   // jobListings[businessName] = jobListing;
+//   localStorage.setItem("jobListing", JSON.stringify(jobListing));
+// };
 //
 //
 //

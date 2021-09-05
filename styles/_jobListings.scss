@@ -4,20 +4,45 @@
   width: 37rem;
 }
 .category div {
-  margin-right: 2.2rem;
+  // margin-right: 2.2rem;
   margin-bottom: 0.5rem;
-}
-.category div li,
-select {
-  margin-bottom: 0.5rem;
-  background-color: forestgreen;
-}
-.editButton {
-  margin-left: auto;
+  font-size: 1.5rem;
 }
 .category div li {
-  overflow-x: auto;
+  margin-bottom: 0.3rem;
+  background-color: forestgreen;
 }
+.category div select {
+  margin-bottom: 0.1rem;
+  background-color: forestgreen;
+}
+.researchedSec,
+.followUpSec {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+.researched,
+.followUp {
+  margin-bottom: 2rem;
+  width: 14rem;
+  font-size: 1.5rem;
+}
+.applyDate {
+  width: 19rem;
+}
+// .dateContainer {
+//   display: flex;
+//   background-color: dodgerblue;
+// }
+// .dateApplied {
+//   margin-bottom: 0.5rem;
+//   font-size: 1.5rem;
+// }
+// .checkbox-list {
+//   margin-right: 1rem;
+// }
+//  overflow-x: auto;
 
 // .listContainer {
 //   display: flex;

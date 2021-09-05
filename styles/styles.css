@@ -26,14 +26,14 @@ header {
 .categoryHeaders {
   display: flex;
   justify-content: space-between;
-  width: 96vw;
+  width: 90vw;
   margin: auto;
 }
 
 section {
   width: 35rem;
   margin-right: 2.2rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .activeHeader {
@@ -53,20 +53,52 @@ main {
 }
 
 .category div {
-  margin-right: 2.2rem;
   margin-bottom: 0.5rem;
-}
-
-.category div li,
-select {
-  margin-bottom: 0.5rem;
-  background-color: forestgreen;
-}
-
-.editButton {
-  margin-left: auto;
+  font-size: 1.5rem;
 }
 
 .category div li {
-  overflow-x: auto;
+  margin-bottom: 0.3rem;
+  background-color: forestgreen;
+}
+
+.category div select {
+  margin-bottom: 0.1rem;
+  background-color: forestgreen;
+}
+
+.researchedSec,
+.followUpSec {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.researched,
+.followUp {
+  margin-bottom: 2rem;
+  width: 14rem;
+  font-size: 1.5rem;
+}
+
+.applyDate {
+  width: 19rem;
+}
+
+.inputSection form {
+  display: flex;
+  justify-content: space-between;
+  min-width: 90vw;
+  margin: auto;
+}
+
+.dateInputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 13rem;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=styles.css.map */
